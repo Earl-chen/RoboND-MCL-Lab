@@ -194,6 +194,11 @@ double max(double arr[], int n)
 
 void visualization(int n, Robot robot, int step, Robot p[], Robot pr[])
 {
+    // 初始化 Python 解释器
+    if (!Py_IsInitialized()) {
+        // 如果尚未初始化，则初始化 Python 解释器
+        Py_Initialize();
+    }
     //Draw the robot, landmarks, particles and resampled particles on a graph
 
     //Graph Format
@@ -299,6 +304,12 @@ int main()
         visualization(n, myrobot, t, p2, p3);
 
     } //End of Steps loop
+
+
+    // 关闭 Python 解释器
+    if (!Py_IsInitialized()) {
+        Py_Finalize();
+    }
 
     return 0;
 }
