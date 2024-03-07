@@ -18,6 +18,7 @@ $ git clone https://github.com/udacity/RoboND-MCL-Lab
 $ cd RoboND-MCL-Lab/
 $ rm -rf Images/*
 $ g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8 -I/usr/local/lib/python3.8/dist-packages/numpy/core/include  -lpthread -lm -lutil -ldl
+$ g++ solution.cpp -o app_solution -std=c++11 -I/usr/include/python3.8 -lpython3.8 -I/usr/local/lib/python3.8/dist-packages/numpy/core/include  -lpthread -lm -lutil -ldl
 ```
 
 ### Running the Program
